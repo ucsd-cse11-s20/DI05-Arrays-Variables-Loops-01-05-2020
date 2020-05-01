@@ -273,7 +273,7 @@ You can assume that the user will always provide exactly one author name.
 Extend the main method from problem 3 such that if the user provides the argument `--buy` followed by the title of one or more books, the program prints the total price of all the books given by the argument. For example:
 
 ```log
-$ javac Discussion05_solution.java
+$ javac Discussion05.java
 $ java Discussion05 --buy "The Two Towers"
 7.99
 $ java Discussion05 --buy "The Return of the King"
