@@ -162,4 +162,62 @@ We then called it with the array `{2.0, 4.0, 1.0}`, which:
 
 ## Problems
 
-### Coming soon!
+### Problem 1: Array Warmup
+In the file `Discussion05.java`, where we have already defined two classes `Book` and `Discussion05`. In the `Discussion05` class, define a new field named `books` which stores a reference to an array containing the following four books:
+
+1. "The Fellowship of the Ring" by "J.R.R. Tolkien" costing $7.99
+2. "The Two Towers" by "J.R.R. Tolkien" costing $7.99
+3. "The Return of the King" by "J.R.R. Tolkien" costing $3.99
+4. "War and Peace" by "Leo Tolstoy" costing $15.99
+
+### Problem 2: Main and Writing to the terminal
+In the `Discussion05` class, defined a `main` method for running the program. Using this method, write a program that prints the four books in the `books` field to the terminal in the following format:
+
+```log
+$ javac Discussion05.java
+$ java Discussion05
+The Fellowship of the Ring by J.R.R. Tolkien, $7.99
+The Two Towers by J.R.R. Tolkien, $7.99
+The Return of the King by J.R.R. Tolkien, $3.99
+War and Peace by Leo Tolstoy, $15.99
+```
+
+You might find the `toText()` method defined in the `Book` class useful for this.
+
+### Problem 3: Filtering using arguments
+Extend the main method from problem 2 such that if the user provides the argument `--author` followed by a second argument containing the name of the author, the program only prints the books whose author is equal to the second argument. For example:
+
+```log
+$ javac Discussion05.java
+$ java Discussion05
+The Fellowship of the Ring by J.R.R. Tolkien, $7.99
+The Two Towers by J.R.R. Tolkien, $7.99
+The Return of the King by J.R.R. Tolkien, $3.99
+War and Peace by Leo Tolstoy, $15.99
+$ java Discussion05 --author "J.R.R. Tolkien"
+The Fellowship of the Ring by J.R.R. Tolkien, $7.99
+The Two Towers by J.R.R. Tolkien, $7.99
+The Return of the King by J.R.R. Tolkien, $3.99
+$ java Discussion05 --author "Leo Tolstoy"
+War and Peace by Leo Tolstoy, $15.99
+$ java Discussion05 --author "Neil Gaiman"
+```
+
+You can assume that the user will always provide exactly one author name.
+
+### Problem 4: Variable update
+Extend the main method from problem 3 such that if the user provides the argument `--buy` followed by the title of one or more books, the program prints the total price of all the books given by the argument. For example:
+
+```log
+$ javac Discussion05_solution.java
+$ java Discussion05 --buy "The Two Towers"
+7.99
+$ java Discussion05 --buy "The Return of the King"
+3.99
+$ java Discussion05 --buy "The Two Towers" "The Return of the King"
+11.98
+$ java Discussion05 --buy "The Fellowship of the Ring" "The Two Towers" "The Return of the King"
+19.97
+```
+
+You can assume that the user will always provide _at least_ one book name.
