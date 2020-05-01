@@ -8,7 +8,7 @@ https://github.com/ucsd-cse11-s20/DI05-Arrays-Variables-Loops-01-05-2020/blob/ma
 
 Starter code:
 
-COMING SOON
+https://github.com/ucsd-cse11-s20/DI05-Arrays-Variables-Loops-01-05-2020/blob/master/Discussion05.java
 
 Solution:
 
