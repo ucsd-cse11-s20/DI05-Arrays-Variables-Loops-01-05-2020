@@ -53,7 +53,7 @@ Hello, CSE11
 ```
 
 #### Running any Java program
-To run a java program without using the tester library, we saw that we need to write a special method named `main`. Then if we built and ran it using `javac` and `java`, it would execute the contents of that method's body. For instance, we placed the following code in a file named `MainExample.java`:
+To run a java program without using the tester library, we saw that we need to write a special method named `main`. Then if we built and ran it using `javac` and `java`, it would evaluate that method's body. For instance, we placed the following code in a file named `MainExample.java`:
 
 ```java
 class MainExample {
@@ -95,7 +95,7 @@ a
 ```
 
 ### Variable Updates
-Last week, we learned that, similar to fields that store values in objects, we can store temporary values in methods using _variables_, which had a very similar syntax to field definitions. This week, we learned that we can _update_ these variables' values. To do so, we wrote statements that looked very similar to variable declaration, but (a) used an existing variable's name and (b) did not include the type. For instance, the following code:
+Last week, we learned that, similar to fields that store values in objects, we can store values in methods using _variables_, which had a very similar syntax to field definitions. This week, we learned that we can _update_ these variables' values. To do so, we wrote statements that looked very similar to variable declaration, but (a) used an existing variable's name and (b) did not include the type. For instance, the following code:
 
 ```java
 class MainExample {
@@ -130,7 +130,7 @@ class MainExample {
 }
 ```
 
-print `15` and `20`:
+prints `15` and `20`:
 
 ```log
 $ javac MainExample.java
@@ -140,7 +140,7 @@ $ java MainExample
 ```
 
 ### Loops
-Another important feature of Java that we learned about this week was the "for-each" or "for-in" _loop_, which executes a block of code for each element of an array. For instance, we wrote a method which returns the average (mean) value of an array of `double`s:
+Another important feature of Java that we learned about this week was how to run a block of code multiple times using "for-loop"s. The first kind of for-loop we saw was the "for-each" or "for-in" _loop_, which executes a block of code for each element of an array. For instance, we wrote a method which returns the average (mean) value of an array of `double`s:
 
 ```java
 double average(double[] doubles) {
@@ -159,6 +159,70 @@ We then called it with the array `{2.0, 4.0, 1.0}`, which:
 3. Executed the code `total = total + d` with `d` equal to `4.0`, which updated `total` to `6.0`.
 4. Executed the code `total = total + d` with `d` equal to `1.0`, which updated `total` to `7.0`.
 5. Returned the result of dividing `total` (`7.0` in this case) by the length of `doubles` (`3` in this case).
+
+The second kind of for-loop we learned about was the "counted for-loop" which had the following structure:
+
+```java
+for (/* initialization statement */; /* loop condition */; /* update expression */) {
+    /* loop body */
+}
+```
+
+and was executed like so:
+
+1. Run the initialization statement.
+2. Evaluate the loop condition. If it evaluates to false, exit the loop.
+3. Evaluate the loop body.
+4. Evaluate the update expression.
+5. Go back to step 2.
+
+This gave us more fine-grained control when accessing elements in a list. For example, the for-loop in the following code:
+
+```java
+class MainExample {
+    public static void main(String[] args) {
+        int[] nums = {1, 2, 3};
+
+        for (int i = 0; i < nums.length; i = i + 1) {
+            System.out.println(nums[i]);
+        }
+    }
+}
+```
+
+prints `1`, `2`, and `3`:
+
+```log
+$ javac MainExample.java
+$ java MainExample
+1
+2
+3
+```
+
+while this code (notice the difference in the initalization statement):
+
+```java
+class MainExample {
+    public static void main(String[] args) {
+        int[] nums = {1, 2, 3};
+
+        for (int i = 1; i < nums.length; i = i + 1) {
+            System.out.println(nums[i]);
+        }
+    }
+}
+```
+
+only prints `2` and `3`:
+
+```log
+$ javac MainExample.java
+$ java MainExample
+2
+3
+```
+
 
 ## Problems
 
