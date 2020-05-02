@@ -9,7 +9,7 @@ This week, we learned that we can represent a collection of values in Java using
 We saw that an array's type starts with the type of the elements it contains (`int`, `String`, `TextTweet`, etc.) followed by `[]`. To instantiate an array, we assigned it the list of elements separated by `,`, and wrapped with `{` and `}`. For instance, to create an array of integers containing the integers `40`, `50`, and `60`, we wrote:
 
 ```java
-int[] nums = {4, 2, 7};
+int[] nums = {40, 50, 60};
 ```
 
 We also saw that to access a single element of the array, we use the *array index expression*, which is the name of the array, followed by the _index_ of the element we want to access wrapped with `[` and `]`. For instance, to get the _first_ element of the `someNumbers` array above, we wrote:
