@@ -12,7 +12,7 @@ https://github.com/ucsd-cse11-s20/DI05-Arrays-Variables-Loops-01-05-2020/blob/ma
 
 Solution:
 
-COMING SOON
+https://github.com/ucsd-cse11-s20/DI05-Arrays-Variables-Loops-01-05-2020/blob/master/Discussion05Solution.java
 
 Readings reviewd in this discussion:
 - [Arrays, Variables, and For-loops](https://cseweb.ucsd.edu/classes/sp17/cse11-a/lecture19.html)
