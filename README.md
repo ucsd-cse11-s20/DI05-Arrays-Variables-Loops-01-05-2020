@@ -1,6 +1,6 @@
 Zoom link: https://ucsd.zoom.us/j/870346269
 
-Zoom recording: COMING SOON
+Zoom recording: https://drive.google.com/file/d/1YCWmO7fFOgSCw45xnGG6Tjw9DWlz54lK/view?usp=sharing
 
 Problem sheet for this discussion:
 
